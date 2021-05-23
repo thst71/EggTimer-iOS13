@@ -22,9 +22,9 @@ class ViewController: UIViewController {
     var timer: Timer? = nil
 
     let eggTimes = [
-        "Soft": Float(5.0 * 60.0),
-        "Medium": Float(7.0 * 60.0),
-        "Hard": Float(12.0 * 60.0)
+        "Soft": Float(5 * 60),
+        "Medium": Float(7 * 60),
+        "Hard": Float(12 * 60)
     ]
 
 //    var eggTime : Float = 1
@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         timerProgressBar.progress = 0
         headerLabel.text = hardness
 
-        var eggTime = eggTimes[hardness] ?? -1.0
+        let eggTime = eggTimes[hardness] ?? -1.0
 
         NSLog("Time for %@ is %d", hardness, eggTime)
 
